@@ -13,6 +13,8 @@ This simple app is to get my hands used to the Vue3 environment. A youtube video
 
 * Go to <github.com/antfu/vitesse>
 * go to the subsection 'Clone to local' and clone it
-```npx degit antfu/vitesse my-vitesse-app
+```
+npx degit antfu/vitesse my-vitesse-app
 cd my-vitesse-app
-pnpm i # If you don't have pnpm installed, run: npm install -g pnpm```
+pnpm i # If you don't have pnpm installed, run: npm install -g pnpm
+```
