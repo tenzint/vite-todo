@@ -1,5 +1,5 @@
 # vite-todo
-A simple todo app to familiarize with Vue3, ViteJS, Vitesse starting template, Pinia for state management...
+A simple todo app to familiarize with Vue3, ViteJS, Pinia for state management...
 
 Previously, I am proficient in using VueJS 2.0, VueX for state management, Vuetify for design
 
@@ -8,6 +8,8 @@ Indeed, the HMR is barely effective for VueJS 2.0 dev server. It takes minutes e
 This simple app is to get my hands used to the Vue3 environment. A youtube video about "Vue CLI vs Vite" has convinced me to try this simple app.
 
 ###
+
+* Not using Vitesse template for this simple todo app. 
 
 ## How to install vitesse template
 
