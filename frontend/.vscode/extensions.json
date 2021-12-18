@@ -1,3 +1,10 @@
 {
-  "recommendations": ["johnsoncodehk.volar"]
+  "recommendations": [
+    "antfu.vite",
+    "johnsoncodehk.volar",
+    "lokalise.i18n-ally",
+    "antfu.iconify",
+    "dbaeumer.vscode-eslint",
+    "csstools.postcss"
+  ]
 }

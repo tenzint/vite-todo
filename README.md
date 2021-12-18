@@ -1,5 +1,5 @@
 # vite-todo
-A simple todo app to familiarize with Vue3, ViteJS, Pinia for state management...
+A simple todo app to familiarize with Vue3, ViteJS build tool, Pinia for state management...
 
 Previously, I am proficient in using VueJS 2.0, VueX for state management, Vuetify for design
 
