@@ -10,5 +10,6 @@
   "files.associations": {
     "*.css": "postcss",
   },
-  "editor.formatOnSave": false,
+  "editor.formatOnSave": true,
+  "[vue]": {"editor.defaultFormatter": "johnsoncodehk.volar"}
 }

@@ -1,12 +1,36 @@
-<script setup lang="ts">
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
-import HelloWorld from './components/HelloWorld.vue'
+<script lang="ts">
+import { ref } from 'vue'
+
+export default {
+  setup() {
+    const todoList = ref([]);
+    const newTodo = ref('');
+    // list.value = []
+
+    function appendList(newText: string) {
+      if (newText === '')
+      return
+      todoList.value.push({ 'name': newText })
+    }
+
+    return { todoList, newTodo, appendList}
+  }
+}
 </script>
 
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
+<input type="text" v-model=newTodo />
+<button @click="newTodo=''">Clear</button>
+<button @click="appendList(newTodo)">Add</button>
+<div>{{ todoList.values.length }}</div>
+<hr />
+<div>{{ newTodo }}</div>
+<hr />
+<div>{{ todoList }}</div>
+<hr />
+<ul>
+  <li v-for="todo in todoList">{{ todo.name }}</li>
+</ul>
 </template>
 
 <style>
