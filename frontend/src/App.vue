@@ -1,7 +1,7 @@
 <script lang="ts">
-import { ref, reactive } from "vue";
+import { ref, reactive, defineComponent } from "vue";
 
-export default {
+export default defineComponent({
   setup() {
     const todoList = reactive([]);
     const newTodo = ref("");
@@ -10,27 +10,28 @@ export default {
     function appendList(newText: string) {
       if (newText === "") return;
       todoList.push({ name: newText });
-      console.log("------------");
-      console.log(todoList);
     }
 
-    return { todoList, newTodo, appendList };
+    function removeTodo(entry) {
+      const index = todoList.indexOf(entry, 0);
+      if (index > -1) {
+        todoList.splice(index, 1);
+      }
+    }
+
+    return { todoList, newTodo, appendList, removeTodo };
   },
-};
+});
 </script>
 
 <template>
   <input type="text" v-model="newTodo" />
   <button @click="newTodo = ''">Clear</button>
   <button @click="appendList(newTodo)">Add</button>
-  <div>{{ todoList.length }}</div>
-  <hr />
-  <div>{{ newTodo }}</div>
-  <hr />
-  <div>{{ todoList }}</div>
-  <hr />
   <ul>
-    <li v-for="todo in todoList">{{ todo.name }}</li>
+    <li v-for="(todo, i) in todoList" :key="todo.id">
+      {{ todo.name }}<button @click="removeTodo(todo)">X</button>
+    </li>
   </ul>
 </template>
 
